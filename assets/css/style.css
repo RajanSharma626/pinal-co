@@ -4,3 +4,12 @@
     margin: 0px;
     padding: 0px;
 }
+
+
+.section-heading h2{
+    width: fit-content;
+}
+
+.text-justify{
+    text-align: justify;
+}
