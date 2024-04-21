@@ -44,13 +44,18 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="archives" class="nav-link menu-link"> <i class="bi bi-star"></i> </i>
+                    <a href="archives" class="nav-link menu-link"> <i class="bi bi-archive"></i> </i>
                         <span data-key="t-users-list">Archives</span> </a>
                 </li>
 
                 <li class="nav-item">
                     <a href="projects" class="nav-link menu-link"><i class="bi bi-boxes"></i> <span
                             data-key="t-reviews-ratings">Projects</span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="products" class="nav-link menu-link"><i class="bi bi-star"></i> <span
+                            data-key="t-reviews-ratings">Products</span></a>
                 </li>
                 <li class="nav-item">
                     <a href="blogs" class="nav-link menu-link"><i class="bi bi-newspaper"></i> <span

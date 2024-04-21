@@ -21,7 +21,7 @@ if (isset($_POST["admin-login"])) {
     if ($count > 0) {
         $_SESSION['Admin_login'] = true;
         $_SESSION['Admin_email'] = $email;
-        header('Location: index.php');
+        header('Location: dashboard');
         die();
     } else {
         $msg = "<div class='alert alert-warning alert-dismissible fade show' role='alert'>

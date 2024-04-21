@@ -2,16 +2,14 @@
 include ("includes/connection.php");
 include ("includes/function.php");
 
-$id = "";
+$id = '';
 $cover = '';
-$cover_alt_text = '';
+// $cover_alt_text = '';
 $banner = '';
-$banner_alt_text = '';
-$title = '';
+// $banner_alt_text = '';
+$heading = '';
+$short_desc = '';
 $blog = '';
-$seo_url = '';
-$keywords = '';
-
 
 if (isset($_GET['id']) && $_GET['id'] != "") {
     $id = $_GET["id"];
@@ -22,20 +20,12 @@ if (isset($_GET['id']) && $_GET['id'] != "") {
         $row = mysqli_fetch_assoc($result);
         $id = $row['id'];
         $cover = $row['cover'];
-        $cover_alt_text = $row['alt_text'];
+        // $cover_alt_text = $row['cover_alt_text'];
+        $banner = $row['banner'];
+        // $banner_alt_text = $row['banner_alt_text'];
         $heading = $row['title'];
-        $subheading = $row['subtitle'];
         $short_desc = $row['short_desc'];
-        $desc = $row['long_desc'];
-        $client_name = $row['client'];
-        $date = $row['date'];
-        $project_url = $row['url'];
-        $cat = $row['cat'];
-        $seo_url = $row['seo_url'];
-        $keywords = $row['meta_keywords'];
-        $serializedTags = unserialize($row['tags']);
-        // Print the tags with commas
-        $tag = implode(',', $serializedTags);
+        $blog = $row['blog'];
     }
 }
 
@@ -44,8 +34,8 @@ if (isset($_POST["addBlog"]) && $_POST["addBlog"] != '') {
 
     $cover = get_safe_value($conn, rand(11, 999) . $_FILES['cover']['name']);
     $banner = get_safe_value($conn, rand(11, 999) . $_FILES['banner']['name']);
-    $cover_alt_text = get_safe_value($conn, $_POST['cover_alt_text']);
-    $banner_alt_text = get_safe_value($conn, $_POST['banner_alt_text']);
+    // $cover_alt_text = get_safe_value($conn, $_POST['cover_alt_text']);
+    // $banner_alt_text = get_safe_value($conn, $_POST['banner_alt_text']);
     $title = get_safe_value($conn, $_POST['heading']);
     $short_desc = get_safe_value($conn, $_POST['short_desc']);
     $blog = get_safe_value($conn, $_POST['blog']);
@@ -57,8 +47,8 @@ if (isset($_POST["addBlog"]) && $_POST["addBlog"] != '') {
     move_uploaded_file($_FILES["cover"]["tmp_name"], "../assets/images/post/" . $cover);
     move_uploaded_file($_FILES["banner"]["tmp_name"], "../assets/images/post/" . $banner);
 
-    $sql = mysqli_query($conn, "INSERT INTO `blogs`(`title`, `short_desc`, `blog`,`banner`,`banner_alt_text`, `cover`,`cover_alt_text`, `seo_url`, `meta_keywords`) VALUES 
-                                                ('$title','$short_desc','$blog','$banner','$banner_alt_text','$cover','$cover_alt_text','$seo_url','$keywords')");
+    $sql = mysqli_query($conn, "INSERT INTO `blogs`(`title`, `short_desc`, `blog`,`banner`, `cover` ) VALUES 
+                                                ('$title','$short_desc','$blog','$banner','$cover')");
 
     if ($sql) {
         header("Location: blogs");
@@ -68,110 +58,68 @@ if (isset($_POST["addBlog"]) && $_POST["addBlog"] != '') {
 }
 
 
-if (isset($_POST["UpdateProject"]) && $_POST["UpdateProject"] != '') {
+if (isset($_POST["UpdateBlog"]) && $_POST["UpdateBlog"] != '') {
     $id = get_safe_value($conn, $_POST['id']);
     $cover = get_safe_value($conn, rand(11, 999) . $_FILES['cover']['name']);
-    $cover_alt_text = get_safe_value($conn, $_POST['cover_alt_text']);
-    $heading = get_safe_value($conn, $_POST['heading']);
-    $subheading = get_safe_value($conn, $_POST['subheading']);
+    $banner = get_safe_value($conn, rand(11, 999) . $_FILES['banner']['name']);
+    // $cover_alt_text = get_safe_value($conn, $_POST['cover_alt_text']);
+    // $banner_alt_text = get_safe_value($conn, $_POST['banner_alt_text']);
+    $title = get_safe_value($conn, $_POST['heading']);
     $short_desc = get_safe_value($conn, $_POST['short_desc']);
-    $desc = get_safe_value($conn, $_POST['desc']);
-    $client_name = get_safe_value($conn, $_POST['client_name']);
-    $date = get_safe_value($conn, $_POST['date']);
-    $project_url = get_safe_value($conn, $_POST['project_url']);
-    $cat = get_safe_value($conn, $_POST['cat']);
-    $seo_url = get_safe_value($conn, $_POST['seo_url']);
-    $keywords = get_safe_value($conn, $_POST['meta_keywords']);
+    $blog = get_safe_value($conn, $_POST['blog']);
 
-    $tagsInput = get_safe_value($conn, $_POST['tags']);
-    $tagsArray = explode(',', $tagsInput);
-    $serializedTags = serialize($tagsArray);
 
-    if ($_FILES['cover']['name'] != '') {
+    if ($_FILES['cover']['name'] != '' && $_FILES['banner']['name'] != '') {
 
-        move_uploaded_file($_FILES["cover"]["tmp_name"], "../assets/images/portfolio/" . $cover);
+        move_uploaded_file($_FILES["cover"]["tmp_name"], "../assets/images/post/" . $cover);
+        move_uploaded_file($_FILES["cover"]["tmp_name"], "../assets/images/post/" . $banner);
 
-        $sql = mysqli_query($conn, "UPDATE `project` SET 
-         `title`='$heading',
-         `subtitle`='$subheading',
-         `short_desc`='$short_desc',
-         `long_desc`='$desc',
-         `client`='$client_name',
-         `url`='$project_url',
-         `cat`='$cat',
-         `cover`='$cover',
-         `alt_text`='$cover_alt_text',
-         `date`='$date',
-         `tags`='$serializedTags',
-         `seo_url`='$seo_url',
-         `meta_keywords`='$keywords' WHERE `id` = '$id'");
+        $sql = mysqli_query($conn, "UPDATE `blogs` SET 
+        `title`='$title',
+        `short_desc`='$short_desc',
+        `blog`='$blog',
+        `banner`='$banner',
+        `cover`='$cover' WHERE  `id` = '$id'");
 
         if ($sql) {
+            header("Location: blogs");
+            exit;
+        }
+    } elseif ($_FILES['cover']['name'] == '' && $_FILES['banner']['name'] != '') {
+        move_uploaded_file($_FILES["banner"]["tmp_name"], "../assets/images/post/" . $banner);
 
-            if (!empty($_FILES['moreImages']['name']) && is_array($_FILES['moreImages']['name'])) {
-                foreach ($_FILES['moreImages']['name'] as $key => $image) {
-                    $moreImage = $_FILES['moreImages']['name'][$key];
-                    $moreImageTmp = $_FILES['moreImages']['tmp_name'][$key];
-                    $moreImageAltText = get_safe_value($conn, $_POST['moreImages_alt_text'][$key]);
+        $sql = mysqli_query($conn, "UPDATE `blogs` SET 
+        `title`='$title',
+        `short_desc`='$short_desc',
+        `blog`='$blog',
+        `banner`='$banner' WHERE  `id` = '$id'");
 
-                    if (!empty($moreImage) && !empty($moreImageTmp)) {
-                        $moreImageAltText = get_safe_value($conn, $_POST['moreImages_alt_text'][$key]);
+        if ($sql) {
+            header("Location: blogs");
+            exit;
+        }
+    } elseif ($_FILES['cover']['name'] != '' && $_FILES['banner']['name'] == '') {
+        move_uploaded_file($_FILES["cover"]["tmp_name"], "../assets/images/post/" . $cover);
 
-                        // Generate a unique name for the image
-                        $moreImageName = rand(111, 999) . "_" . $moreImage;
+        $sql = mysqli_query($conn, "UPDATE `blogs` SET 
+        `title`='$title',
+        `short_desc`='$short_desc',
+        `blog`='$blog',
+        `cover`='$cover' WHERE  `id` = '$id'");
 
-                        // Move the uploaded file to the destination folder
-                        move_uploaded_file($moreImageTmp, "../assets/images/portfolio/" . $moreImageName);
-
-                        // Insert the image details into the project_images table
-                        $sql = mysqli_query($conn, "INSERT INTO `project_images` (`project_id`, `img`, `alt_text`) VALUES ('$id', '$moreImageName', '$moreImageAltText')");
-                        // You may want to handle error checking and logging here
-                    }
-                }
-            }
-            header("Location: projects");
+        if ($sql) {
+            header("Location: blogs");
             exit;
         }
     } else {
 
-        $sql = mysqli_query($conn, "UPDATE `project` SET 
-         `title`='$heading',
-         `subtitle`='$subheading',
-         `short_desc`='$short_desc',
-         `long_desc`='$desc',
-         `client`='$client_name',
-         `url`='$project_url',
-         `cat`='$cat',
-         `alt_text`='$cover_alt_text',
-         `date`='$date',
-         `tags`='$serializedTags',
-         `seo_url`='$seo_url',
-         `meta_keywords`='$keywords' WHERE  `id` = '$id'");
+        $sql = mysqli_query($conn, "UPDATE `blogs` SET 
+        `title`='$title',
+        `short_desc`='$short_desc',
+        `blog`='$blog' WHERE  `id` = '$id'");
 
         if ($sql) {
-
-            if (!empty($_FILES['moreImages']['name']) && is_array($_FILES['moreImages']['name'])) {
-                foreach ($_FILES['moreImages']['name'] as $key => $image) {
-                    $moreImage = $_FILES['moreImages']['name'][$key];
-                    $moreImageTmp = $_FILES['moreImages']['tmp_name'][$key];
-                    $moreImageAltText = get_safe_value($conn, $_POST['moreImages_alt_text'][$key]);
-
-                    if (!empty($moreImage) && !empty($moreImageTmp)) {
-                        $moreImageAltText = get_safe_value($conn, $_POST['moreImages_alt_text'][$key]);
-
-                        // Generate a unique name for the image
-                        $moreImageName = rand(111, 999) . "_" . $moreImage;
-
-                        // Move the uploaded file to the destination folder
-                        move_uploaded_file($moreImageTmp, "../assets/images/portfolio/" . $moreImageName);
-
-                        // Insert the image details into the project_images table
-                        $sql = mysqli_query($conn, "INSERT INTO `project_images` (`project_id`, `img`, `alt_text`) VALUES ('$id', '$moreImageName', '$moreImageAltText')");
-                        // You may want to handle error checking and logging here
-                    }
-                }
-            }
-            header("Location: projects");
+            header("Location: blogs");
             exit;
         }
     }
@@ -179,12 +127,6 @@ if (isset($_POST["UpdateProject"]) && $_POST["UpdateProject"] != '') {
 
 }
 
-
-if (isset($_GET['removeimg']) && !empty($_GET['removeimg'])) {
-    $imgRemoveId = $_GET['removeimg'];
-    $deleteImg = mysqli_query($conn, "DELETE FROM `project_images` WHERE `id` = '$imgRemoveId'");
-
-}
 ?>
 
 <!doctype html>
@@ -194,7 +136,7 @@ if (isset($_GET['removeimg']) && !empty($_GET['removeimg'])) {
 <head>
 
     <?php include ('includes/head.php') ?>
-    <title>Add Blog | Webkye</title>
+    <title>Add Blog | Pinal & Co.</title>
 
 </head>
 
@@ -262,59 +204,50 @@ if (isset($_GET['removeimg']) && !empty($_GET['removeimg'])) {
                                             <?php
                                             if ($cover != '') {
                                                 ?>
-                                                <img src="../assets/images/portfolio/<?php echo $cover; ?>" class="mt-2"
-                                                    alt="" width="100px">
+                                                <img src="../assets/images/post/<?php echo $cover; ?>" class="mt-2" alt=""
+                                                    width="100px">
                                             <?php } ?>
                                         </div>
-                                        <div class="mb-3">
+                                        <!-- <div class="mb-3">
                                             <label class="form-label" for="Service-title-input">Alt Text</label>
                                             <input type="text" class="form-control" id="service-title-input"
-                                                name="cover_alt_text" value="" placeholder="Enter Alt Text" required>
-                                        </div>
+                                                name="cover_alt_text" value="<?php echo $cover_alt_text ?>"
+                                                placeholder="Enter Alt Text" required>
+                                        </div> -->
                                         <div class="mb-3">
                                             <label class="form-label" for="Service-title-input">Banner Image</label>
                                             <input type="text" class="form-control d-none" id="Service-id-input"
                                                 name="id" value="<?php echo $id ?>">
                                             <input type="file" class="form-control" name="banner" <?php echo isset($_GET['id']) ? "" : "required" ?>>
                                             <?php
-                                            if ($cover != '') {
+                                            if ($banner != '') {
                                                 ?>
-                                                <img src="../assets/images/portfolio/<?php echo $cover; ?>" class="mt-2"
-                                                    alt="" width="100px">
+                                                <img src="../assets/images/post/<?php echo $banner; ?>" class="mt-2" alt=""
+                                                    width="100px">
                                             <?php } ?>
                                         </div>
-                                        <div class="mb-3">
+                                        <!-- <div class="mb-3">
                                             <label class="form-label" for="Service-title-input">Alt Text</label>
                                             <input type="text" class="form-control" id="service-title-input"
-                                                name="banner_alt_text" value="" placeholder="Enter Alt Text" required>
-                                        </div>
+                                                name="banner_alt_text" value="<?php echo $banner_alt_text ?>"
+                                                placeholder="Enter Alt Text" required>
+                                        </div> -->
                                         <div class="mb-3">
                                             <label class="form-label" for="Service-title-input">Blog Title</label>
                                             <input type="text" class="form-control" id="service-title-input"
-                                                name="heading" value="" placeholder="Enter project title" required>
+                                                name="heading" value="<?php echo $heading ?>"
+                                                placeholder="Enter project title" required>
                                         </div>
                                         <div class="mb-3">
                                             <label class="form-label">Short Description</label>
                                             <textarea name="short_desc" placeholder="Write a short description..."
-                                                class="form-control" required></textarea>
+                                                class="form-control" required><?php echo $short_desc ?></textarea>
                                         </div>
                                         <div class="mb-3">
                                             <label class="form-label">Blog</label>
                                             <textarea name="blog" id="ckeditor" placeholder="Write a Blog..."
-                                                class="form-control"></textarea>
-                                        </div>
-
-                                        <div class="mb-3">
-                                            <label class="form-label" for="service-icon-input">Keywords</label>
-                                            <input type="text" class="form-control" id="service-icon-input"
-                                                name="meta_keywords" value="<?php echo $keywords ?>"
-                                                placeholder="Enter Keywords...">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label class="form-label" for="service-icon-input">Seo Url</label>
-                                            <input type="text" class="form-control" id="service-icon-input"
-                                                name="seo_url" value="<?php echo $seo_url ?>"
-                                                placeholder="Enter seo_url...">
+                                                class="form-control">
+                                            <?php echo $blog ?></textarea>
                                         </div>
                                         <!-- end card -->
 
@@ -324,7 +257,7 @@ if (isset($_GET['removeimg']) && !empty($_GET['removeimg'])) {
                                             <?php
                                             if (isset($_GET['id']) && !empty($_GET['id'])) {
                                                 ?>
-                                                <input type="submit" name="UpdateProject" class="btn btn-success w-sm"
+                                                <input type="submit" name="UpdateBlog" class="btn btn-success w-sm"
                                                     value="Update">
                                             <?php } else { ?>
                                                 <input type="submit" name="addBlog" class="btn btn-success w-sm"

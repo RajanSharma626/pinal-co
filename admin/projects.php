@@ -8,10 +8,8 @@ if (isset($_GET['type']) && $_GET['type'] != '') {
 
     if ($type == 'delete') {
         $id = get_safe_value($conn, $_GET['id']);
-        $deleteImages = "DELETE FROM `project_images` WHERE `project_id`='$id'";
         $delete = "DELETE FROM `project` WHERE `id`='$id'";
         $res = mysqli_query($conn, "$delete");
-        $res2 = mysqli_query($conn, "$deleteImages");
         if ($res) {
             header("Location: projects");
         }
@@ -28,7 +26,7 @@ if (isset($_GET['type']) && $_GET['type'] != '') {
 <head>
 
     <?php include ('includes/head.php') ?>
-    <title>Projects | Webkye.in</title>
+    <title>Projects | Pinal & Co.</title>
 
 </head>
 
@@ -78,7 +76,7 @@ if (isset($_GET['type']) && $_GET['type'] != '') {
                                     <div class="card-body">
 
                                         <div>
-                                            <img src="../assets/images/portfolio/<?php echo $row['cover']?>" alt="<?php echo $row['alt_text']?>"
+                                            <img src="../assets/images/projects/<?php echo $row['img']?>" alt=""
                                                 class="rounded img-fluid"> &nbsp;
                                             <h5 class="mb-0 text-uppercase">
                                                 <?php echo $row['title'] ?>
@@ -87,7 +85,7 @@ if (isset($_GET['type']) && $_GET['type'] != '') {
                                         </div>
 
                                         <p class=" text-muted fs-15">
-                                            <?php echo $row['short_desc'] ?>
+                                            <?php echo $row['description'] ?>
                                         </p>
 
                                         <div class="d-flex justify-content-end">
