@@ -26,7 +26,7 @@ if (isset($_GET['type']) && $_GET['type'] != '') {
 <head>
 
     <?php include ('includes/head.php') ?>
-    <title>Blogs | Webkye.in</title>
+    <title>Blogs | Pinal & Co.</title>
 
 </head>
 

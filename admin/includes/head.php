@@ -4,7 +4,7 @@ if(isset($_SESSION["Admin_login"]) && $_SESSION["Admin_login"] == true)
 
 }else
 {
-    header("location: admin-login.php");
+    header("location: login");
     die();
 }
 ?>

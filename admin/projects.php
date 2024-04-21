@@ -76,7 +76,7 @@ if (isset($_GET['type']) && $_GET['type'] != '') {
                                     <div class="card-body">
 
                                         <div>
-                                            <img src="../assets/images/projects/<?php echo $row['img']?>" alt=""
+                                            <img src="../assets/images/projects/<?php echo $row['img'] ?>" alt=""
                                                 class="rounded img-fluid"> &nbsp;
                                             <h5 class="mb-0 text-uppercase">
                                                 <?php echo $row['title'] ?>
@@ -111,7 +111,7 @@ if (isset($_GET['type']) && $_GET['type'] != '') {
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <script>document.write(new Date().getFullYear())</script> © Webkye.
+                            <script>document.write(new Date().getFullYear())</script> © Pinal & Co.
                         </div>
                     </div>
                 </div>
