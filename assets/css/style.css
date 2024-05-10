@@ -2,8 +2,10 @@
 /* @import url('../font/Fontspring-DEMO-theseasons-reg.otf'); */
 
 @font-face {
-  font-family: "Season"; /* Choose a name for your font */
-  src: url("../font/Fontspring-DEMO-theseasons-reg.otf") format("woff"); /* Add additional file formats if necessary */
+  font-family: "Season";
+  /* Choose a name for your font */
+  src: url("../font/Fontspring-DEMO-theseasons-reg.otf") format("woff");
+  /* Add additional file formats if necessary */
   /* Add more src declarations for other font formats if needed */
 }
 
@@ -13,11 +15,13 @@
 
 body {
   font-family: "Josefin Sans", sans-serif;
+  /* overflow-x: hidden; */
 }
 
 .default-font {
   font-family: "Josefin Sans", sans-serif;
 }
+
 .the-season-font {
   font-family: "Season";
 }
@@ -49,9 +53,42 @@ body {
   background: #fec791;
 }
 
+/* .header-section{
+  background: url('../images/banner-video.mp4');
+  background-position: center;
+  background-size: cover; 
+  height: 100vh;
+} */
+
+.header {
+  background-color: rgba(0, 0, 0, 0.507);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+#myVideo {
+  /* position: fixed; */
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .section-heading h2 {
   width: fit-content;
 }
+
+.header-section {
+  position: relative;
+}
+
+/* .artist-section {
+  background: url("../images/2.JPG");
+  background-size: cover;
+  background-position: center;
+} */
 
 .artist-section h3 {
   width: fit-content;
@@ -64,6 +101,7 @@ body {
 .bg-main {
   background-color: var(--primary) !important;
 }
+
 .bg-outline-main {
   border: 1px solid var(--primary) !important;
   border-radius: 5px;
@@ -76,52 +114,143 @@ body {
   color: black !important;
 }
 
-.mision-card {
+/* .mision-card {
   background: url("../images/card-bg.jpg");
   background-position: center;
   background-size: cover;
-}
-.vision-card {
+} */
+/* .vision-card {
   background: url("../images/card-bg2.jpg");
   background-position: center;
   background-size: cover;
-}
-.value-card {
+} */
+/* .value-card {
   background: url("../images/card-bg3.jpg");
   background-position: center;
   background-size: cover;
+} */
+
+.theme-text {
+  color: #332A29;
+}
+
+.theme-text2 {
+  color: #B8B0AB;
+}
+
+.theme-bg {
+  background-color: #B8B0AB;
+}
+
+.theme-bg2 {
+  background-color: #332A29;
+}
+
+.theme-bg {
+  background-color: #B8B0AB;
 }
 
 .light-bg {
   background-color: rgba(0, 0, 0, 0.67) !important;
 }
 
-
-.project-card{
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+.company-section {
+  background: url("../images/3.JPG");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
 }
 
 .project-section h3 {
   width: fit-content;
 }
 
-.product-name{
+.product-name {
   font-size: 12px;
   padding: 10px 0px;
   margin-bottom: 0px;
 }
 
-.contact-us h3{
-width: fit-content;
+.contact-us h3 {
+  width: fit-content;
 }
 
-.form{
+.form {
   width: 60%;
   margin: auto;
 }
-.form .iti{
+
+.form .iti {
   width: 100% !important;
 }
-.form .submit-btn{
+
+.form .submit-btn {
   background-color: black;
+}
+
+.blog-card {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.blog-card img {
+  border-radius: 8px 8px 0px 0px;
+}
+
+.blog-card a {
+  text-decoration: none;
+}
+
+.footer-link ul li {
+  list-style: none;
+}
+
+.footer-link ul li a {
+  text-decoration: none;
+}
+
+
+.transform-text {
+  background-color: #B8B0AB;
+  color: #332A29;
+}
+
+.why-section {
+  position: relative;
+}
+
+.why-text {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+.shadow-img {
+  box-shadow: inset 250px -214px 100px 10px #332A29;
+}
+
+
+.how-section {
+  position: relative;
+}
+
+.how-its-work {
+  position: absolute;
+  bottom: 40px;
+  padding-left: 20px;
+  width: 100%;
+}
+
+.acheivement-section{
+  position: relative;
+}
+
+.achive-heading{
+  position: absolute;
+  width: 100%;
+  top: 10px;
+  text-align: center;
+}
+
+.all-heading{
+  background-color: rgba(51, 42, 41, 0.35) !important;
 }
