@@ -55,89 +55,83 @@ include ("admin/includes/connection.php");
             <div class="m-auto">
               <a class="btn text-white m-2 josfin-font" href="#artits">The Artist</a>
               <a class="btn text-white m-2 josfin-font" href="#company">Company</a>
-              <a class="btn text-white m-2 josfin-font" href="#Achieves">Archives</a>
               <a class="btn text-white m-2 josfin-font" href="#project">Project</a>
-              <a class="btn text-white m-2 josfin-font" href="#">Blogs</a>
+              <a class="btn text-white m-2 josfin-font" href="#Achieves">Archives</a>
+              <a class="btn text-white m-2 josfin-font" href="#blogs">Blogs</a>
               <a class="btn text-white m-2 josfin-font" href="#contactus">Contact us</a>
             </div>
           </div>
         </div>
       </nav>
       <!-- ================= Navbar end =================== -->
-
-      <!-- ================= Banner =================== -->
-
-      <div class="row container p-5 mt-5 ">
-        <div class="col-6 text-center text-white">
-          <h1 class="the-season-font">“I design your desire.”</h1>
-          <p class="ps-5 ms-5">- Pinal Vadadoriya, Founder</p>
-        </div>
-      </div>
-      <div class="row container p-5 mt-5 pb-0">
-        <div class="col-6 text-white">
-          <h5 class="ms-5">Contact Us</h5>
-        </div>
-      </div>
     </div>
+
+    <div class="banner-heading text-white">
+      <h1 class="josfin-font">“I design your desire.”</h1>
+      <p class="me-5 fs-5 text-end">- Pinal Vadadoriya, Founder</p>
+    </div>
+
+    <div class="col-6 text-white d-flex align-items-center contact-us-text">
+      <h4 class="ms-5"><a class="text-white btn fs-4" href="#contactus">Contact Us</a></h4>
+    </div>
+
   </header>
   <!-- ================= Banner end =================== -->
 
   <!-- ================= Artist =================== -->
-  <section class="artist-section pt-5 theme-bg2" id="artits">
+  <section class="artist-section" id="artits" style="background:url('assets/images/bg-3.png');background-size: cover;">
     <div class="container-fluid">
-      <h2 class="text-white pb-2 px-2 m-auto fs-1 the-season-font animate__fadeInUp animate__animated text-center">
-        Pinal
-      </h2>
-      <div class="row align-items-center text-white">
+      <div class="row text-white">
         <div class="col-12 col-lg-5 px-0">
           <img src="assets/images/2.jpg" class="img-fluid " alt="">
         </div>
         <div class="col-12 col-lg-7">
-          <p class="fs-4 text-center me-5 px-lg-5">
-            My designs reflect your uniqueness, ensuring each piece is
-            exactly what you want.
-          </p>
-          <p class="fs-4 text-center me-5 px-lg-5">
-            When your style combines with my
-            creativity, I can make something
-            special just for you.
+          <h2 class="theme-text pt-5 px-2 m-auto fs-1 the-season-font animate__fadeInUp animate__animated text-center">
+            Pinal
+          </h2>
 
-          </p>
+          <div class="d-flex h-100 align-items-center">
+            <div class="mb-5">
+              <p class="fs-4 text-center px-lg-5 theme-text">
+                My designs reflect your uniqueness, ensuring each piece is
+                exactly what you want.
+              </p>
+              <p class="fs-4 text-center px-lg-5 mb-5 theme-text">
+                When your style combines with my
+                creativity, I can make something
+                special just for you.
+
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    </div>
   </section>
   <!-- ================= Artist end=================== -->
+
+  
   <!-- <hr> -->
   <!-- ================= Company =================== -->
-  <section class="company-section py-5" id="company">
+  <section class="company-section" id="company">
+    <h1 class="text-white pb-4 m-auto fs-1 the-season-font w-100 py-3 section-heading text-center">
+      Company
+    </h1>
     <div class="container-fluid">
-      <div class="section-heading text-center">
-        <h2 class=" text-white pb-2 px-2 m-auto fs-1 the-season-font w-100"
-          style="box-shadow: rgba(0, 0, 0, 0.3735) 0px 50px 83px -28px inset;">
-          Company
-        </h2>
+      <div class="row mb-0">
+        <div class="col-12 p-0">
+          <img src="assets/images/3.JPG" class="img-fluid" alt="">
+        </div>
       </div>
     </div>
   </section>
 
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-4 p-0">
-        <img src="assets/images/4 A.jpg" class="img-fluid" alt="">
-      </div>
-      <div class="col-4 p-0">
-        <img src="assets/images/4 b.jpg" class="img-fluid" alt="">
-      </div>
-      <div class="col-4 p-0">
-        <img src="assets/images/4 c.JPG" class="img-fluid" alt="">
-      </div>
-    </div>
-  </div>
+  <!-- <div class="container-fluid">
 
-  <div class="container-fluid transform-text py-5">
-    <div class="row justify-content-center py-4">
+  </div> -->
+
+  <div class="container-fluid">
+    <div class="row justify-content-center align-items-center transform-text">
       <div class="col-6 text-center">
         <h3>“Transforming dreams into reality that reflects your
           style, your journey, your story.”</h3>
@@ -146,52 +140,15 @@ include ("admin/includes/connection.php");
   </div>
   <!-- ================= company end =================== -->
   <!-- <hr> -->
-  <!-- ================= Why Section =================== -->
-  <section class="why-section text-white">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-4 p-0">
-          <img src="assets/images/5 a.JPG" class="img-fluid" alt="">
-        </div>
-        <div class="col-4 p-0">
-          <img src="assets/images/5 b.jpg" class="img-fluid" alt="">
-        </div>
-        <div class="col-4 p-0">
-          <img src="assets/images/5 c.JPG" class="img-fluid" alt="">
-        </div>
-      </div>
-    </div>
 
-    <div class="why-text" style="box-shadow: rgba(0, 0, 0, 37.35) 0px -50px 83px -28px inset;">
-      <h2 class="fs-1 text-center">Why bespoke jewelry?</h2>
-      <p class="text-center">BESPOKE JEWELRY STANDS OUT FROM OTHER
-        ORDINARY JEWELRY PIECES BECAUSE IT'S MADE <br>
-        JUST FOR YOU, REFLECTING YOUR STYLE.</p>
-    </div>
-
-  </section>
-  <div class="container-fluid theme-bg py-5">
-    <div class="row justify-content-center py-4">
-      <div class="col-12 col-lg-6">
-        <p class="fs-5 text-center theme-text">
-          UNLIKE ORDINARY JEWELRY, BESPOKE PIECES
-          ARE PERSONALIZED, MAKING THEM SPECIAL
-          AND UNIQUE TO YOU, WITH SENTIMENTAL
-          VALUE THAT LASTS.
-        </p>
-      </div>
-    </div>
-  </div>
-  <!-- ================= why Section end =================== -->
-  <!-- <hr> -->
   <!-- ================= Why-us Section =================== -->
-  <section class="why-us-section theme-bg2">
+  <section class="why-us-section theme-bg">
     <div class="container-fluid">
 
       <div class="row justify-content-center align-items-center ">
         <div class="col-7">
-          <h2 class="fs-1 ms-5 text-white">Why us?</h2>
-          <p class="fs-5 text-justify ms-5 text-secondary animate__fadeInUp animate__animated">
+          <h2 class="fs-1 ms-5 text-black">Why us?</h2>
+          <p class="fs-5 text-justify ms-5 text-white animate__fadeInUp animate__animated">
             WE PROVIDE OUR EXPERTISE IN THE MAKING OF <br>
             ONE OF A KIND MASTER PIECE
           </p>
@@ -205,18 +162,18 @@ include ("admin/includes/connection.php");
     </div>
   </section>
 
-  <div class="container-fluid theme-bg py-5">
-    <div class="row justify-content-center py-4">
-      <div class="col-12 col-lg-6">
-        <p class="fs-5 text-center theme-text">
+  <div class="container-fluid text-section1">
+    <div class="row justify-content-center h-100 align-items-center text-shadow">
+      <div class="col-12 col-lg-7 py-5">
+        <p class="fs-4 text-center theme-text">
           EXPERIENCE PERSONALIZED LUXURY WITH AWARD-WINNING
           JEWELRY DESIGNER CRAFTING EXTRAORDINARY PIECES
           SPECIFICALLY CRAFTED FOR YOU.
         </p>
-        <p class="fs-5 text-center theme-text mt-5 text-white">
+        <p class="fs-4 text-center theme-text mt-5 text-white">
           GET EXACTLY WHAT YOU WANT
         </p>
-        <p class="fs-5 text-center theme-text">
+        <p class="fs-4 text-center theme-text">
           I BELIEVE THAT WHEN YOU’RE PURCHASING A PIECE OF
           JEWELLERY, IT SHOULD BE EXACTLY WHAT YOU’RE LOOKING FOR.
         </p>
@@ -224,9 +181,92 @@ include ("admin/includes/connection.php");
     </div>
   </div>
   <!-- ================= Why-us Section end =================== -->
+
+  <!-- ================= Why Section =================== -->
+  <section class="why-section theme-text">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12" style="background:url('assets/images/bg-4.png');background-size: cover;">
+          <div class="row align-items-center">
+            <div class="col-12 col-lg-5 p-0">
+              <img src="assets/images/5 a.JPG" class="img-fluid" alt="">
+            </div>
+            <div class="col-12 col-lg-7 px-lg-5">
+              <h2 class="fs-1 text-end text-black">Why bespoke jewelry?</h2>
+              <p class="text-end">BESPOKE JEWELRY STANDS OUT FROM OTHER
+                ORDINARY JEWELRY PIECES BECAUSE IT'S MADE
+                JUST FOR YOU, REFLECTING YOUR STYLE.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12" style="background:url('assets/images/bg-2.png');background-size: cover;">
+          <div class="row align-items-center">
+            <div class="col-12 col-lg-7 px-lg-5">
+              <h2 class="fs-1 text-start text-black">UNIQUE EPRESSTION</h2>
+              <p class="text-start">UNLIKE ORDINARY JEWELRY, BESPOKE PIECES ARE
+                PERSONALIZED, MAKING THEM SPECIAL AND UNIQUE TO
+                YOU, WITH SENTIMENTAL VALUE THAT LASTS.</p>
+            </div>
+            <div class="col-12 col-lg-5 p-0">
+              <img src="assets/images/5 b.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="row align-items-center life-time-investment">
+            <div class="col-12 col-lg-5 p-0">
+              <img src="assets/images/5 c.JPG" class="img-fluid" alt="">
+            </div>
+            <div class="col-12 col-lg-7 px-lg-5 ">
+              <h2 class="fs-1 text-end text-black">LIFE TIME INVESTMENT</h2>
+              <p class="text-end">BESPOKE JEWELRY IS NOT JUST A PURCHASE; IT'S
+                ANINVESTMENT IN QUALITY, CRAFTSMANSHIP,
+                AND TIME LESS BEAUTY THAT CAN BE PASSED
+                DOWN AS A CHERISHED FAMILY HEIRLOOM.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="container-fluid bond-section py-4" style="background:url('assets/images/bg-7.png');background-size: cover;">
+    <div class="row">
+      <div class="col-12 col-lg-6 ps-3">
+        <h2 class="fs-1 text-black">BOND OF TRUST</h2>
+        <p class="theme-text text-white">
+          WORKING CLOSELY WITH AS KILLED JEWELER TO
+          BRING A VISION TO LIFE CREATES A BOND OF TRUST
+          AND COLLABORATION, ENSURING THAT THE FINAL
+          PIECE EXCEEDS EXPECTATIONS AND REFLECTS THE
+          CLIENT'S UNIQUE VISION AND PERSONALITY.
+
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="container-fluid text-section1 row justify-content-center align-items-center">
+    <div class="col-12 col-lg-7">
+      <h2 class="text-center theme-text ">
+        UNLIKE ORDINARY JEWELRY, BESPOKE PIECES
+        ARE PERSONALIZED, MAKING THEM SPECIAL
+        AND UNIQUE TO YOU, WITH SENTIMENTAL
+        VALUE THAT LASTS.
+      </h2>
+    </div>
+  </div>
+  <!-- ================= why Section end =================== -->
+  <!-- <hr> -->
+
   <!-- <hr> -->
   <!-- ================= how its work Section =================== -->
-  <section class="how-section" id="Achieves">
+  <section class="how-section">
     <div class="container-fluid px-0">
       <img src="assets/images/7.JPG" class="img-fluid" alt="">
     </div>
@@ -243,7 +283,7 @@ include ("admin/includes/connection.php");
               CREATIONS IN FRONT OF YOUR EYES.
             </p>
           </div>
-          <div class="col-2">
+          <div class="col-2 text-end pe-5">
             <img src="assets/images/play-button.svg" class="img-fluid" width="60px" alt="">
           </div>
         </div>
@@ -252,10 +292,10 @@ include ("admin/includes/connection.php");
 
   </section>
 
-  <div class="container-fluid theme-bg py-5">
-    <div class="row justify-content-center py-4">
+  <div class="container-fluid  text-section1">
+    <div class="row justify-content-center align-items-center">
       <div class="col-12 col-lg-6">
-        <p class="fs-5 text-center theme-text">
+        <p class="fs-3 text-center theme-text ">
           WHEN IDEAS TAKE SHAPE AND DECISIONS
           ARE MADE. WE CAREFULLY CHOOSE THE TYPE
           OF STONES, THE SETTING TECHNIQUE, THE
@@ -266,15 +306,16 @@ include ("admin/includes/connection.php");
       </div>
     </div>
   </div>
-  <div class="container-fluid theme-bg2 py-5">
-    <div class="row justify-content-center py-4">
-      <div class="col-12 col-lg-6">
-        <p class="fs-5 text-center theme-text2">
+
+  <div class="container-fluid py-5 contact-text-section" style="background:url('assets/images/bg-5.png');background-size: cover;">
+    <div class="row justify-content-center py-5">
+      <div class="col-12 col-lg-6 py-lg-5">
+        <p class="fs-5 text-center text-white pt-lg-5">
           YOU WILL HAVE THE EXTRA ORDINARY MASTER PIECE
           ONLY BELONGS TO YOU.
         </p>
-        <p class="fs-4 text-center text-white the-season-font">
-          Contact us
+        <p class=" text-center text-white pb-lg-5">
+          <a class="fs-4 btn text-black the-season-font" href="#contactus">Contact us</a>
         </p>
       </div>
     </div>
@@ -283,20 +324,20 @@ include ("admin/includes/connection.php");
 
 
   <!-- ================= Projects Section =================== -->
-  <section class="project-section py-5 theme-bg" id="company">
-    <div class="container-fluid">
+  <section class="project-section pb-5" id="project">
+    <div class="container-fluid px-0">
       <div class="section-heading text-center">
-        <h3 class="text-white pb-2 px-2 m-auto fs-1 the-season-font">
+        <h2 class="text-white py-3 m-auto fs-1 w-100 the-season-font all-heading py-3">
           Projects
-        </h3>
+        </h2>
       </div>
-      <div class="container content mt-5">
+      <div class="container-fluid content mt-5">
         <div class="row project-slider">
           <?php
           $project = mysqli_query($conn, "SELECT * FROM `project` ORDER BY `id` DESC");
           while ($row = mysqli_fetch_assoc($project)) {
             ?>
-            <div class="col-4 px-3">
+            <div class="col-4">
               <div class="project-card rounded py-3">
                 <img src="assets/images/projects/<?php echo $row['img'] ?>" class="img-fluid" alt="" />
                 <h6 class="fs-4 text-center mt-2"><?php echo $row['title'] ?></h6>
@@ -310,10 +351,10 @@ include ("admin/includes/connection.php");
   <!-- ================= Project Section end =================== -->
 
   <!-- ================= Achivement  Section =================== -->
-  <section class="acheivement-section" id="achivie">
-    <h3 class="achive-heading pb-2 text-white px-2 m-auto fs-1 the-season-font all-heading">
+  <section class="acheivement-section" id="Achieves">
+    <h2 class="achive-heading pt-4 pb-5 text-white m-auto fs-1 the-season-font all-heading2">
       ARCHIVE
-    </h3>
+    </h2>
     <div class="container-fluid">
       <div class="row px-0">
         <img src="assets/images/9.JPG" class="px-0" alt="">
@@ -321,32 +362,34 @@ include ("admin/includes/connection.php");
     </div>
   </section>
 
-  <div class="achive-bar container-fluid  theme-bg2">
-    <div class="row px-0 py-3 text-white align-items-center">
-      <div class="col">
-        DOI WINNER-2023
-      </div>
-      <div class="col">
-        PROFESSTIONAL JEWELRY DIGNE(IGI)
-      </div>
-      <div class="col">
-        GSI DIAMOND ESSENTIALS
-      </div>
-      <div class="col">
-        DCA DIAMOND CERTIFIED
-      </div>
-      <div class="col">
-        DOI 2ND RUNNER UP-2022
-      </div>
+  <div class="achive-bar container-fluid theme-bg2">
+    <div class="row px-0 py-3 text-white align-items-center" id="marquee-container">
+      <marquee direction="left" behavior="scroll" scrollamount="5">
+        <div class="col">
+          DOI WINNER-2023
+        </div>
+        <div class="col">
+          PROFESSTIONAL JEWELRY DIGNE(IGI)
+        </div>
+        <div class="col">
+          GSI DIAMOND ESSENTIALS
+        </div>
+        <div class="col">
+          DCA DIAMOND CERTIFIED
+        </div>
+        <div class="col">
+          DOI 2ND RUNNER UP-2022
+        </div>
+      </marquee>
     </div>
   </div>
   <!-- ================= Achivement  Section end =================== -->
 
   <!-- ================= Blog Section =================== -->
-  <section class="product-section py-5" id="product">
-    <div class="container-fluid">
+  <section class="product-section py-5 pt-0 theme-bg" id="blogs">
+    <div class="container-fluid px-0">
       <div class="section-heading text-center">
-        <h3 class="pb-2 px-2 m-auto fs-1 the-season-font">Our Blogs</h3>
+        <h2 class="pb-3 pt-5 m-auto fs-1 the-season-font all-heading w-100">Our Blogs</h2>
       </div>
       <div class="container content mt-5">
         <div class="row">
@@ -356,7 +399,7 @@ include ("admin/includes/connection.php");
             ?>
 
             <div class="col-4 ">
-              <div class="bg-main rounded blog-card">
+              <div class="theme-bg2 rounded blog-card">
 
                 <a href="">
                   <img src="assets/images/post/<?php echo $row['cover'] ?>" class="img-fluid" alt="" />
@@ -367,7 +410,7 @@ include ("admin/includes/connection.php");
                     echo $formattedDate; // Output: 21 Apr, 2024
                     ?>
                   </p>
-                  <h5 class="p-3 py-0 mb-0 text-black"
+                  <h5 class="p-3 py-0 mb-0 text-white"
                     style="width: 100%; text-wrap: nowrap; overflow-x: hidden;text-overflow: ellipsis;">
                     <?php echo $row['title'] ?>
                   </h5>
@@ -390,9 +433,9 @@ include ("admin/includes/connection.php");
   <section class="contact-us py-5" id="contactus">
     <div class="container py-3 rounded-3">
       <div class="section-heading text-center mb-5">
-        <h3 class="border-bottom border-3 border-black pb-2 px-2 m-auto fs-1 the-season-font mb-3">
+        <h2 class="border-bottom border-3 border-black pb-2 px-2 the-season-font m-auto fs-1 mb-3">
           Contact us
-        </h3>
+        </h2>
         <p>
           As you explore the World of Pinal & Co, our advisors would be
           pleased to assist you and provide tailored counsel.
@@ -471,28 +514,53 @@ include ("admin/includes/connection.php");
   <!-- ================= Footer Section =================== -->
   <footer class="footer-section theme-bg2 pt-5">
     <div class="container">
-      <div class="row pb-5">
+      <div class="row align-items-center pb-5">
+        <div class="col-3">
+          <!-- <p class="mb-0 text-white">STAY IN TOUCH</p> -->
+          <h3 class="fs-1 the-season-font text-white">Contact us</h3>
+        </div>
+        <div class="col-3">
+          <p class="fs-5 mb-0 josfin-font text-white">Location</p>
+          <h6 class="text-white mb-0">Surat, Gujrat, India</h6>
+        </div>
+        <div class="col-3">
+          <p class="fs-5 mb-0 josfin-font text-white">EMAIL ADDRESS</p>
+          <h6 class="text-white mb-0">
+            <a href="mailto:Pinal.design@gmail.com" class="nav-link">Pinal.design@gmail.com</a>
+          </h6>
+        </div>
+        <div class="col-3">
+          <p class="fs-5 mb-0 josfin-font text-white">PHONE NUMBER</p>
+          <h6 class="text-white mb-0">
+            <a href="tel:+91 9998679654" class="nav-link">+91 9998679654</a>
+          </h6>
+          <h6 class="text-white mb-0">
+            <a href="tel:+1 (647) 615 9654" class="nav-link">+1 (647) 615 9654</a>
+          </h6>
+        </div>
+      </div>
+      <div class="row">
         <div class="col-3">
           <img src="assets/images/logo/logo.png" alt="" width="200px" />
         </div>
         <div class="col-3 footer-link">
           <h6 class="text-white">THE COMPANY</h6>
           <ul class="ps-0">
-            <li><a class="text-secondary" href="">THE ARTIST</a></li>
-            <li><a class="text-secondary" href="">COMPANY</a></li>
-            <li><a class="text-secondary" href="">ARCHIVES</a></li>
-            <li><a class="text-secondary" href="">PROJECTS</a></li>
+            <li><a class="theme-text2" href="#artits">THE ARTIST</a></li>
+            <li><a class="theme-text2" href="#company">COMPANY</a></li>
+            <li><a class="theme-text2" href="#Achieves">ARCHIVES</a></li>
+            <li><a class="theme-text2" href="#project">PROJECTS</a></li>
           </ul>
         </div>
         <div class="col-3 footer-link">
           <h6 class="text-white">NAVIGATION</h6>
           <ul class="ps-0">
-            <li><a class="text-secondary" href="">HOME</a></li>
-            <li><a class="text-secondary" href="">BLOGS</a></li>
-            <li><a class="text-secondary" href="">CONTACT US</a></li>
+            <li><a class="theme-text2" href="/">HOME</a></li>
+            <li><a class="theme-text2" href="#blogs">BLOGS</a></li>
+            <li><a class="theme-text2" href="#contactus">CONTACT US</a></li>
           </ul>
         </div>
-        <div class="col-3 d-flex justify-content-end">
+        <div class="col-3">
           <div class="follow">
             <h6 class="text-white">FOLLOW US</h6>
             <div class="d-flex">
@@ -511,40 +579,15 @@ include ("admin/includes/connection.php");
         </div>
       </div>
 
-      <div class="row align-items-center">
-        <div class="col-3">
-          <!-- <p class="mb-0 text-white">STAY IN TOUCH</p> -->
-          <h3 class="fs-1 the-season-font text-white">Contact us</h3>
-        </div>
-        <div class="col-3">
-          <p class="fs-5 mb-0 the-season-font text-white">Location</p>
-          <h6 class="text-white mb-0">Surat, Gujrat, India</h6>
-        </div>
-        <div class="col-3">
-          <p class="fs-5 mb-0 the-season-font text-white">EMAIL ADDRESS</p>
-          <h6 class="text-white mb-0">
-            <a href="mailto:Pinal.design@gmail.com" class="nav-link">Pinal.design@gmail.com</a>
-          </h6>
-        </div>
-        <div class="col-3">
-          <p class="fs-5 mb-0 the-season-font text-white">PHONE NUMBER</p>
-          <h6 class="text-white mb-0">
-            <a href="tel:+91 9998679654" class="nav-link">+91 9998679654</a>
-          </h6>
-          <h6 class="text-white mb-0">
-            <a href="tel:+1 (647) 615 9654" class="nav-link">+1 (647) 615 9654</a>
-          </h6>
-        </div>
-      </div>
     </div>
     <hr class="border-white" />
     <div class="row mx-0 align-items-center">
       <div class="col-4"></div>
       <div class="col-4">
-        <p class="text-center text-secondary">© PINAL & CO. ALL RIGHTS RESERVED.</p>
+        <p class="text-center text-secondary mb-1">© PINAL & CO. ALL RIGHTS RESERVED.</p>
       </div>
       <div class="col-4">
-        <p class="text-end text-secondary" style="font-size: 12px;">DESIGN BY <a href="https://webkye.in/"
+        <p class="text-end text-secondary mb-1" style="font-size: 12px;">DESIGN BY <a href="https://webkye.in/"
             target="_blank" class="text-white" style="text-decoration: none;">WEBKYE</a></p>
       </div>
     </div>
@@ -673,6 +716,40 @@ include ("admin/includes/connection.php");
           breakpoint: 1024,
           settings: {
             slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true,
+          },
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    });
+    $(".company-slider").slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      dots: false,
+      prevArrow: false,
+      nextArrow: false,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 1,
             slidesToScroll: 1,
             infinite: true,
             dots: true,
