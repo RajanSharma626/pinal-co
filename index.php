@@ -21,14 +21,16 @@ include ("admin/includes/connection.php");
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 
   <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.3.11/slick.css" />
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.3.11/slick.min.js"></script>
 
-  <!-- Link to Wow.js (you can also download and host it locally) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
@@ -45,8 +47,8 @@ include ("admin/includes/connection.php");
       <!-- ================= Navbar =================== -->
       <nav class="navbar">
         <div class="container-fluid text-center">
-          <a class="navbar-brand m-auto animate__fadeIn animate__animated" href="#"><img class="img-fluid"
-              src="assets/images/logo/logo.png" alt="logo" width="300px" /></a>
+          <a class="wow animate__animated animate__fadeIn navbar-brand m-auto" data-wow-delay="0.25s"
+            href="#"><img class="img-fluid" src="assets/images/logo/logo.png" alt="logo" width="300px" /></a>
         </div>
       </nav>
       <nav class="navbar">
@@ -66,7 +68,7 @@ include ("admin/includes/connection.php");
       <!-- ================= Navbar end =================== -->
     </div>
 
-    <div class="banner-heading text-white">
+    <div class="wow animate__animated animate__fadeIn banner-heading text-white " data-wow-delay=".25s">
       <h1 class="josfin-font">“I design your desire.”</h1>
       <p class="me-5 fs-5 text-end">- Pinal Vadadoriya, Founder</p>
     </div>
@@ -78,83 +80,177 @@ include ("admin/includes/connection.php");
   </header>
   <!-- ================= Banner end =================== -->
 
-  <!-- ================= Artist =================== -->
-  <section class="artist-section" id="artits" style="background:url('assets/images/bg-3.png');background-size: cover;">
-    <div class="container-fluid">
-      <div class="row text-white">
-        <div class="col-12 col-lg-5 px-0">
-          <img src="assets/images/2.jpg" class="img-fluid " alt="">
-        </div>
-        <div class="col-12 col-lg-7">
-          <h2 class="theme-text pt-5 px-2 m-auto fs-1 the-season-font animate__fadeInUp animate__animated text-center">
-            Pinal
-          </h2>
+  <!-- ================= About Us =================== -->
+  <section class="about-us-section " id="artits">
+    <div class="container-fluid about-us">
+      <img src="assets/images/about-bg.png" class="img-fluid wow animate__fadeIn animate__animated" data-wow-delay="0.25s"
+        alt="">
 
-          <div class="d-flex h-100 align-items-center">
-            <div class="mb-5">
-              <p class="fs-4 text-center px-lg-5 theme-text">
-                My designs reflect your uniqueness, ensuring each piece is
-                exactly what you want.
-              </p>
-              <p class="fs-4 text-center px-lg-5 mb-5 theme-text">
-                When your style combines with my
-                creativity, I can make something
-                special just for you.
-
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ================= Artist end=================== -->
-
-  
-  <!-- <hr> -->
-  <!-- ================= Company =================== -->
-  <section class="company-section" id="company">
-    <h1 class="text-white pb-4 m-auto fs-1 the-season-font w-100 py-3 section-heading text-center">
-      Company
-    </h1>
-    <div class="container-fluid">
-      <div class="row mb-0">
-        <div class="col-12 p-0">
-          <img src="assets/images/3.JPG" class="img-fluid" alt="">
-        </div>
+      <div class="about-text wow animate__animated animate__fadeIn" data-wow-delay="0.25s">
+        <p class="fs-3 text-center px-md-5">
+          Pinal, a bespoke jewelry designer, intricately weaves stories of elegance and beauty into her unique
+          creations. Each piece she crafts reflects the individuality and style of her clients, resonating deeply with
+          their personalities and becoming cherished symbols of self-expression.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- <div class="container-fluid">
+  <section class="about-pinal-section wow animate__animated animate__fadeIn">
+    <div class="about-pinal">
+      <img src="assets/images/about.png" class="img-fluid" alt="">
 
-  </div> -->
-
-  <div class="container-fluid">
-    <div class="row justify-content-center align-items-center transform-text">
-      <div class="col-6 text-center">
-        <h3>“Transforming dreams into reality that reflects your
-          style, your journey, your story.”</h3>
+      <div class="about-pinal-text wow animate__fadeInLeft animate__animated" data-wow-delay="0.25s">
+        <h1 class="w-50 px-md-5">
+          Pinal
+        </h1>
+        <p class="fs-4 w-50 px-md-5">
+          My designs reflect your uniqueness, ensuring each piece is exactly what you want.
+        </p>
+        <p class="fs-4 w-50 px-md-5">
+          When your style combines with my creativity, I can make something special just for you.
+        </p>
       </div>
+    </div>
+  </section>
+  <!-- ================= About Us end=================== -->
+
+
+  <!-- ================= Transform start ================== -->
+  <section class="wow animate__animated animate__fadeIn transform" data-wow-delay="0.25s">
+    <div class="container-fluid">
+      <img src="assets/images/dreams.svg" alt="" class="img-fluid">
+    </div>
+  </section>
+  <!-- ================= Transform end=================== -->
+
+
+  <!-- ================= Pinal Start =================== -->
+  <div class="achive-bar container-fluid bg-black">
+    <div class="row px-0 py-3 text-white align-items-center" id="marquee-container">
+      <marquee direction="left" behavior="scroll" scrollamount="5">
+        <div class="col">
+          <img src="assets/images/Burst-star-white.svg" alt="">
+        </div>
+        <div class="col">
+          PINAL & CO. BESPOKE JEWELRY DESIGNER
+        </div>
+        <div class="col">
+          <img src="assets/images/Burst-star-white.svg" alt="">
+        </div>
+        <div class="col">
+          PINAL & CO. BESPOKE JEWELRY DESIGNER
+        </div>
+        <div class="col">
+          <img src="assets/images/Burst-star-white.svg" alt="">
+        </div>
+        <div class="col">
+          PINAL & CO. BESPOKE JEWELRY DESIGNER
+        </div>
+        <div class="col">
+          <img src="assets/images/Burst-star-white.svg" alt="">
+        </div>
+        <div class="col">
+          PINAL & CO. BESPOKE JEWELRY DESIGNER
+        </div>
+        <div class="col">
+          <img src="assets/images/Burst-star-white.svg" alt="">
+        </div>
+        <div class="col">
+          PINAL & CO. BESPOKE JEWELRY DESIGNER
+        </div>
+        <div class="col">
+          <img src="assets/images/Burst-star-white.svg" alt="">
+        </div>
+      </marquee>
     </div>
   </div>
+  <section class="pinal wow animate__animated animate__fadeIn"  data-wow-delay="0.25s">
+    <img src="assets/images/pinal.png" class="img-fluid" alt="">
+  </section>
+
+  <!-- ================= Pinal end =================== -->
+
+
+  <!-- ================= why start ================== -->
+  <section class="why wow animate__animated animate__fadeIn" data-wow-delay="0.25s">
+    <div class="container-fluid">
+      <img src="assets/images/why.svg" alt="" class="img-fluid">
+    </div>
+  </section>
+  <!-- ================= why end=================== -->
+
+  <section class="what_you_want">
+    <img src="assets/images/what_you_want_bg.png" class="img-fluid" alt="">
+    <div class="row what_you_want_text">
+      <div class="col-10 bg-white p-5 text-center">
+        <div class="py-3 wow animate__animated animate__fadeInUp"  data-wow-delay="0.25s">
+
+          <p class="fs-5">
+            Experience personalized luxury with award-winning jewelry designer crafting extraordinary pieces
+            specifically
+            crafted for you
+          </p>
+
+          <p class="fw-bold fs-4">
+            Get exactly what you want
+          </p>
+
+          <p class="fs-5">
+            I believe that when you’re purchasing a piece of jewellery, it should be exactly what you’re looking for.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- ================= company end =================== -->
   <!-- <hr> -->
 
   <!-- ================= Why-us Section =================== -->
-  <section class="why-us-section theme-bg">
+  <section class="why-us-section">
     <div class="container-fluid">
 
-      <div class="row justify-content-center align-items-center ">
-        <div class="col-7">
-          <h2 class="fs-1 ms-5 text-black">Why us?</h2>
-          <p class="fs-5 text-justify ms-5 text-white animate__fadeInUp animate__animated">
-            WE PROVIDE OUR EXPERTISE IN THE MAKING OF <br>
-            ONE OF A KIND MASTER PIECE
-          </p>
+      <div class="row justify-content-center align-items-center py-5">
+        <div class="col-11 py-5 ">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-6 wow animate__animated animate__fadeInUp"  data-wow-delay="0.25s">
+              <h2 class="fs-1 ms-5 why-text-heading text-center">Why Bespoke Jewelry?</h2>
+              <p class="text-justify ms-5 animate__fadeInUp animate__animated text-center">
+                Bespoke jewelry stands out from other ordinary jewelry pieces because it's made just for you, reflecting
+                your style.
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="col-5 px-0 shadow-img">
-          <img src="assets/images/6.jpg" class="img-fluid " alt="">
+        <div class="col-11 py-5">
+          <div class="row align-items-center">
+            <div class="col-lg-6 col-12 wow animate__animated animate__fadeInLeft"  data-wow-delay="0.25s">
+              <img src="assets/images/1.svg" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 col-12  wow animate__animated animate__fadeInRight"  data-wow-delay="0.25s">
+              <img src="assets/images/1.png" class="img-fluid" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="col-11 py-5">
+          <div class="row align-items-center">
+            <div class="col-lg-6 col-12 wow animate__animated animate__fadeInLeft"  data-wow-delay="0.25s">
+              <img src="assets/images/2.png" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 col-12  wow animate__animated animate__fadeInRight"  data-wow-delay="0.25s">
+              <img src="assets/images/2.svg" class="img-fluid" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="col-11 py-5">
+          <div class="row align-items-center">
+            <div class="col-lg-6 col-12 wow animate__animated animate__fadeInLeft"  data-wow-delay="0.25s">
+              <img src="assets/images/3.svg" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 col-12  wow animate__animated animate__fadeInRight"  data-wow-delay="0.25s">
+              <img src="assets/images/3.png" class="img-fluid" alt="">
+            </div>
+          </div>
         </div>
 
       </div>
@@ -162,176 +258,72 @@ include ("admin/includes/connection.php");
     </div>
   </section>
 
-  <div class="container-fluid text-section1">
-    <div class="row justify-content-center h-100 align-items-center text-shadow">
-      <div class="col-12 col-lg-7 py-5">
-        <p class="fs-4 text-center theme-text">
-          EXPERIENCE PERSONALIZED LUXURY WITH AWARD-WINNING
-          JEWELRY DESIGNER CRAFTING EXTRAORDINARY PIECES
-          SPECIFICALLY CRAFTED FOR YOU.
-        </p>
-        <p class="fs-4 text-center theme-text mt-5 text-white">
-          GET EXACTLY WHAT YOU WANT
-        </p>
-        <p class="fs-4 text-center theme-text">
-          I BELIEVE THAT WHEN YOU’RE PURCHASING A PIECE OF
-          JEWELLERY, IT SHOULD BE EXACTLY WHAT YOU’RE LOOKING FOR.
-        </p>
-      </div>
-    </div>
-  </div>
   <!-- ================= Why-us Section end =================== -->
 
-  <!-- ================= Why Section =================== -->
-  <section class="why-section theme-text">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12" style="background:url('assets/images/bg-4.png');background-size: cover;">
-          <div class="row align-items-center">
-            <div class="col-12 col-lg-5 p-0">
-              <img src="assets/images/5 a.JPG" class="img-fluid" alt="">
-            </div>
-            <div class="col-12 col-lg-7 px-lg-5">
-              <h2 class="fs-1 text-end text-black">Why bespoke jewelry?</h2>
-              <p class="text-end">BESPOKE JEWELRY STANDS OUT FROM OTHER
-                ORDINARY JEWELRY PIECES BECAUSE IT'S MADE
-                JUST FOR YOU, REFLECTING YOUR STYLE.</p>
-            </div>
-          </div>
-        </div>
 
-        <div class="col-12" style="background:url('assets/images/bg-2.png');background-size: cover;">
-          <div class="row align-items-center">
-            <div class="col-12 col-lg-7 px-lg-5">
-              <h2 class="fs-1 text-start text-black">UNIQUE EPRESSTION</h2>
-              <p class="text-start">UNLIKE ORDINARY JEWELRY, BESPOKE PIECES ARE
-                PERSONALIZED, MAKING THEM SPECIAL AND UNIQUE TO
-                YOU, WITH SENTIMENTAL VALUE THAT LASTS.</p>
-            </div>
-            <div class="col-12 col-lg-5 p-0">
-              <img src="assets/images/5 b.jpg" class="img-fluid" alt="">
-            </div>
-          </div>
-        </div>
 
-        <div class="col-12">
-          <div class="row align-items-center life-time-investment">
-            <div class="col-12 col-lg-5 p-0">
-              <img src="assets/images/5 c.JPG" class="img-fluid" alt="">
-            </div>
-            <div class="col-12 col-lg-7 px-lg-5 ">
-              <h2 class="fs-1 text-end text-black">LIFE TIME INVESTMENT</h2>
-              <p class="text-end">BESPOKE JEWELRY IS NOT JUST A PURCHASE; IT'S
-                ANINVESTMENT IN QUALITY, CRAFTSMANSHIP,
-                AND TIME LESS BEAUTY THAT CAN BE PASSED
-                DOWN AS A CHERISHED FAMILY HEIRLOOM.</p>
-            </div>
-          </div>
-        </div>
+  <!-- ================= How do we work Section start =================== -->
+
+  <section class="theme-bg py-5 how_do_work">
+    <div class="row align-items-center">
+      <div class="col-12 col-md-5 wow animate__animated animate__fadeInLeft"  data-wow-delay="0.25s">
+        <img src="assets/images/sitting_img.svg" class="img-fluid" alt="">
       </div>
-    </div>
-  </section>
-
-
-  <div class="container-fluid bond-section py-4" style="background:url('assets/images/bg-7.png');background-size: cover;">
-    <div class="row">
-      <div class="col-12 col-lg-6 ps-3">
-        <h2 class="fs-1 text-black">BOND OF TRUST</h2>
-        <p class="theme-text text-white">
-          WORKING CLOSELY WITH AS KILLED JEWELER TO
-          BRING A VISION TO LIFE CREATES A BOND OF TRUST
-          AND COLLABORATION, ENSURING THAT THE FINAL
-          PIECE EXCEEDS EXPECTATIONS AND REFLECTS THE
-          CLIENT'S UNIQUE VISION AND PERSONALITY.
-
+      <div class="col-12 col-md-6 px-5 wow animate__animated animate__fadeInRight"  data-wow-delay="0.25s">
+        <h2 class="text-white">How Do We Work?</h2><br>
+        <p>
+          Your Wildest Ideas Turn Into Spectacularcreations in Front of your eyes.
+        </p><br>
+        <p class="fs-4">
+          When ideas take shape and decisions are made. We carefully choose the type of stones, the setting technique,
+          the
+          raw materials and the colour gradients that will be used to create your exceptional piece.
         </p>
       </div>
     </div>
+  </section>
+  <!-- ================= How do we work Section end =================== -->
 
-  </div>
 
 
-  <div class="container-fluid text-section1 row justify-content-center align-items-center">
-    <div class="col-12 col-lg-7">
-      <h2 class="text-center theme-text ">
-        UNLIKE ORDINARY JEWELRY, BESPOKE PIECES
-        ARE PERSONALIZED, MAKING THEM SPECIAL
-        AND UNIQUE TO YOU, WITH SENTIMENTAL
-        VALUE THAT LASTS.
-      </h2>
-    </div>
-  </div>
-  <!-- ================= why Section end =================== -->
-  <!-- <hr> -->
 
-  <!-- <hr> -->
+
+
+
   <!-- ================= how its work Section =================== -->
-  <section class="how-section">
+  <section class="how-section wow animate__animated animate__fadeIn"  data-wow-delay="0.25s">
     <div class="container-fluid px-0">
       <img src="assets/images/7.JPG" class="img-fluid" alt="">
     </div>
 
     <div class="how-its-work">
       <div class="container-fluid">
-        <div class="row theme-text2 justify-content-between align-items-center">
-          <div class="col-6">
-            <h2 class="fs-1">
-              How do we work ?
-            </h2>
-            <p class="fs-5">
-              YOUR WILDEST IDEAS TURN INTO SPECTACULAR
-              CREATIONS IN FRONT OF YOUR EYES.
+        <div class="row theme-text2 justify-content-center align-items-center">
+          <div class="col-12 col-md-8 text-center">
+            <p class="fs-1 text-center">
+              You will have the extraordinary masterpiece
+              Only belongs to you.
             </p>
-          </div>
-          <div class="col-2 text-end pe-5">
-            <img src="assets/images/play-button.svg" class="img-fluid" width="60px" alt="">
+
+            <a href="" class="btn bg-white px-5 py-2"> Contact us</a>
           </div>
         </div>
       </div>
     </div>
-
   </section>
 
-  <div class="container-fluid  text-section1">
-    <div class="row justify-content-center align-items-center">
-      <div class="col-12 col-lg-6">
-        <p class="fs-3 text-center theme-text ">
-          WHEN IDEAS TAKE SHAPE AND DECISIONS
-          ARE MADE. WE CAREFULLY CHOOSE THE TYPE
-          OF STONES, THE SETTING TECHNIQUE, THE
-          RAW MATERIAL SAND THE COLOUR
-          GRADIENTS THAT WILL BE USED TO CREATE
-          YOUR EXCEPTIONAL PIECE.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <div class="container-fluid py-5 contact-text-section" style="background:url('assets/images/bg-5.png');background-size: cover;">
-    <div class="row justify-content-center py-5">
-      <div class="col-12 col-lg-6 py-lg-5">
-        <p class="fs-5 text-center text-white pt-lg-5">
-          YOU WILL HAVE THE EXTRA ORDINARY MASTER PIECE
-          ONLY BELONGS TO YOU.
-        </p>
-        <p class=" text-center text-white pb-lg-5">
-          <a class="fs-4 btn text-black the-season-font" href="#contactus">Contact us</a>
-        </p>
-      </div>
-    </div>
-  </div>
   <!-- ================= how its work  Section end =================== -->
 
 
   <!-- ================= Projects Section =================== -->
-  <section class="project-section pb-5" id="project">
+  <section class="project-section py-5" id="project">
     <div class="container-fluid px-0">
       <div class="section-heading text-center">
-        <h2 class="text-white py-3 m-auto fs-1 w-100 the-season-font all-heading py-3">
-          Projects
+        <h2 class="m-auto fs-1 w-100 the-season-font py-3 wow animate__animated animate__fadeInUp">
+          My Design Work
         </h2>
       </div>
-      <div class="container-fluid content mt-5">
+      <div class="container-fluid content wow animate__animated animate__fadeIn"  data-wow-delay="0.25s">
         <div class="row project-slider">
           <?php
           $project = mysqli_query($conn, "SELECT * FROM `project` ORDER BY `id` DESC");
@@ -352,33 +344,79 @@ include ("admin/includes/connection.php");
 
   <!-- ================= Achivement  Section =================== -->
   <section class="acheivement-section" id="Achieves">
-    <h2 class="achive-heading pt-4 pb-5 text-white m-auto fs-1 the-season-font all-heading2">
-      ARCHIVE
-    </h2>
-    <div class="container-fluid">
+    <div class="achieve-bg">
       <div class="row px-0">
-        <img src="assets/images/9.JPG" class="px-0" alt="">
+        <img src="assets/images/achivement_bg.png" class="px-0" alt="">
       </div>
+
+      <div class="achive-main">
+        <div class="row">
+          <div class="col-9 bg-white">
+            <div class="row justify-content-center align-items-center">
+              <div class="col-5 px-0 wow animate__animated animate__fadeInLeft"  data-wow-delay="0.25s">
+                <img src="assets/images/achivement.png" class="img-fluid" alt="">
+              </div>
+              <div class="col-7 wow animate__animated animate__fadeInRight"  data-wow-delay="0.25s">
+                <div class="row">
+                  <div class="col-12">
+                    <h6 class="text-secondary">ACHIEVEMENT</h6>
+                    <h1>Pinal & co.</h1>
+                    <p>
+                      You will have the extraordinary masterpiece
+                      Only belongs to you.
+                    </p>
+
+                    <p>
+                      One of the most notable achievements in the jewelry design industry is by Elsa Peretti, a
+                      celebrated designer who transformed the industry with her modern and innovative designs. Her
+                      iconic creations, such as the "Bone Cuff" and the "Open Heart" necklace
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <div class="achive-bar container-fluid theme-bg2">
+  <div class="achive-bar container-fluid bg-black">
     <div class="row px-0 py-3 text-white align-items-center" id="marquee-container">
       <marquee direction="left" behavior="scroll" scrollamount="5">
         <div class="col">
+          <img src="assets/images/Burst-star-white.svg" alt="">
+        </div>
+        <div class="col">
           DOI WINNER-2023
+        </div>
+        <div class="col">
+          <img src="assets/images/Burst-star-white.svg" alt="">
         </div>
         <div class="col">
           PROFESSTIONAL JEWELRY DIGNE(IGI)
         </div>
         <div class="col">
+          <img src="assets/images/Burst-star-white.svg" alt="">
+        </div>
+        <div class="col">
           GSI DIAMOND ESSENTIALS
+        </div>
+        <div class="col">
+          <img src="assets/images/Burst-star-white.svg" alt="">
         </div>
         <div class="col">
           DCA DIAMOND CERTIFIED
         </div>
         <div class="col">
+          <img src="assets/images/Burst-star-white.svg" alt="">
+        </div>
+        <div class="col">
           DOI 2ND RUNNER UP-2022
+        </div>
+        <div class="col">
+          <img src="assets/images/Burst-star-white.svg" alt="">
         </div>
       </marquee>
     </div>
@@ -386,10 +424,10 @@ include ("admin/includes/connection.php");
   <!-- ================= Achivement  Section end =================== -->
 
   <!-- ================= Blog Section =================== -->
-  <section class="product-section py-5 pt-0 theme-bg" id="blogs">
+  <section class="product-section py-5 pt-0" id="blogs">
     <div class="container-fluid px-0">
       <div class="section-heading text-center">
-        <h2 class="pb-3 pt-5 m-auto fs-1 the-season-font all-heading w-100">Our Blogs</h2>
+        <h2 class="pb-3 pt-5 m-auto fs-1 the-season-font w-100">Our Blogs</h2>
       </div>
       <div class="container content mt-5">
         <div class="row">
@@ -398,8 +436,8 @@ include ("admin/includes/connection.php");
           while ($row = mysqli_fetch_assoc($blog)) {
             ?>
 
-            <div class="col-4 ">
-              <div class="theme-bg2 rounded blog-card">
+            <div class="col-4 wow animate__animated animate__fadeInUp"  data-wow-delay="0.25s">
+              <div class="shadow rounded blog-card">
 
                 <a href="">
                   <img src="assets/images/post/<?php echo $row['cover'] ?>" class="img-fluid" alt="" />
@@ -512,83 +550,65 @@ include ("admin/includes/connection.php");
   <!-- ================= Contact us Section end =================== -->
 
   <!-- ================= Footer Section =================== -->
-  <footer class="footer-section theme-bg2 pt-5">
+  <footer class="footer-section pt-5"
+    style="background: url(assets/images/footer_bg.png);background-position: center;background-size: cover;">
     <div class="container">
-      <div class="row align-items-center pb-5">
-        <div class="col-3">
-          <!-- <p class="mb-0 text-white">STAY IN TOUCH</p> -->
-          <h3 class="fs-1 the-season-font text-white">Contact us</h3>
-        </div>
-        <div class="col-3">
-          <p class="fs-5 mb-0 josfin-font text-white">Location</p>
-          <h6 class="text-white mb-0">Surat, Gujrat, India</h6>
-        </div>
-        <div class="col-3">
-          <p class="fs-5 mb-0 josfin-font text-white">EMAIL ADDRESS</p>
-          <h6 class="text-white mb-0">
-            <a href="mailto:Pinal.design@gmail.com" class="nav-link">Pinal.design@gmail.com</a>
-          </h6>
-        </div>
-        <div class="col-3">
-          <p class="fs-5 mb-0 josfin-font text-white">PHONE NUMBER</p>
-          <h6 class="text-white mb-0">
-            <a href="tel:+91 9998679654" class="nav-link">+91 9998679654</a>
-          </h6>
-          <h6 class="text-white mb-0">
-            <a href="tel:+1 (647) 615 9654" class="nav-link">+1 (647) 615 9654</a>
-          </h6>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-3">
-          <img src="assets/images/logo/logo.png" alt="" width="200px" />
-        </div>
-        <div class="col-3 footer-link">
-          <h6 class="text-white">THE COMPANY</h6>
-          <ul class="ps-0">
-            <li><a class="theme-text2" href="#artits">THE ARTIST</a></li>
-            <li><a class="theme-text2" href="#company">COMPANY</a></li>
-            <li><a class="theme-text2" href="#Achieves">ARCHIVES</a></li>
-            <li><a class="theme-text2" href="#project">PROJECTS</a></li>
-          </ul>
-        </div>
-        <div class="col-3 footer-link">
-          <h6 class="text-white">NAVIGATION</h6>
-          <ul class="ps-0">
-            <li><a class="theme-text2" href="/">HOME</a></li>
-            <li><a class="theme-text2" href="#blogs">BLOGS</a></li>
-            <li><a class="theme-text2" href="#contactus">CONTACT US</a></li>
-          </ul>
-        </div>
-        <div class="col-3">
-          <div class="follow">
-            <h6 class="text-white">FOLLOW US</h6>
-            <div class="d-flex">
-              <a href="#" class="me-3">
-                <i class="bi bi-facebook fs-3 text-white"></i></a>
-              <a href="#" class="me-3">
-                <i class="bi bi-instagram fs-3 text-white"></i></a>
-              <a href="#" class="me-3">
-                <i class="bi bi-twitter-x fs-3 text-white"></i></a>
-              <a href="#" class="me-3">
-                <i class="bi bi-envelope fs-3 text-white"></i></a>
-              <a href="#" class="me-3">
-                <i class="bi bi-whatsapp   fs-3 text-white"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="row justify-content-evenly">
+        <div class="col-md-4 col-12">
+          <h2 class="text-white mb-0">PINAL & CO.</h2>
 
-    </div>
-    <hr class="border-white" />
-    <div class="row mx-0 align-items-center">
-      <div class="col-4"></div>
-      <div class="col-4">
-        <p class="text-center text-secondary mb-1">© PINAL & CO. ALL RIGHTS RESERVED.</p>
-      </div>
-      <div class="col-4">
-        <p class="text-end text-secondary mb-1" style="font-size: 12px;">DESIGN BY <a href="https://webkye.in/"
-            target="_blank" class="text-white" style="text-decoration: none;">WEBKYE</a></p>
+          <p class="text-white">BESPOKE JEWELRY DESIGNER</p>
+
+          <p class="text-light">
+            Empowering Movement, Enhancing Lives
+          </p>
+
+          <p class="text-light">
+            <i class="bi bi-telephone"></i> +91 9998679654 &nbsp; +1 (647) 615 9654
+          </p>
+          <p class="text-light">
+            <i class="bi bi-geo-alt"></i> Surat, Gujrat, India
+          </p>
+          <p class="text-light fs-5 mb-0">
+            By Appointment:
+          </p>
+          <p class="text-light">
+            Monday - Saturday, 11:00 AM - 5PM
+          </p>
+
+
+        </div>
+        <div class="col-md-4 col-12">
+          <h4 class="text-white">The Company</h4>
+          <ul class="ps-0">
+            <li class="mb-1"> <a href="">Home</a></li>
+            <li class="mb-1"> <a href="">The artist</a></li>
+            <li class="mb-1"> <a href="">Company</a></li>
+            <li class="mb-1"> <a href="">Archives</a></li>
+            <li class="mb-1"> <a href="">Project</a></li>
+            <li class="mb-1"> <a href="">Blogs</a></li>
+            <li class="mb-1"> <a href="">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-12">
+          <h4 class="text-white">Subscribe Pinal & Co.</h4>
+          <p class="text-white">
+            Subscribe and follow Pinal&co for exclusive access to inspiration, the latest news, and invitations to
+            events nearest you.
+          </p>
+          <p>
+            <a href="mailto:pinal.design@gmail.com"><u>Pinal.design@gmail.com</u> </a>
+          </p>
+
+          <a href=""><i class="bi bi-facebook fs-3 mx-1"></i></a>
+          <a href=""><i class="bi bi-twitter-x fs-3 mx-1"></i></a>
+          <a href=""><i class="bi bi-instagram fs-3 mx-1"></i></a>
+        </div>
+
+        <hr class="border-white mt-5" />
+        <div class="col-12 text-white text-center">
+          <p>© <?php echo date('Y') ?> - All Right Reserved</p>
+        </div>
       </div>
     </div>
   </footer>
@@ -597,6 +617,10 @@ include ("admin/includes/connection.php");
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
   <script>
     $(document).ready(function () {
       $(".my-slider").slick({
@@ -836,6 +860,8 @@ include ("admin/includes/connection.php");
         phoneInputField.value = currentValue;
       }
     });
+
+    
   </script>
 
 
