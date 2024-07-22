@@ -13,9 +13,76 @@
   --primary: #3A3B3E;
 }
 
+
+
 body {
   font-family: "Josefin Sans", sans-serif;
   overflow-x: hidden;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+
+.loading-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #191919;
+  z-index: 1000;
+  text-align: center;
+}
+
+.logo-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 150px;
+  /* Adjust the size as needed */
+}
+
+.buffering {
+  position: absolute;
+  border: 4px solid #f3f3f3;
+  /* Light grey */
+  border-top: 4px solid #3498db;
+  /* Blue */
+  border-radius: 50%;
+  width: 200px;
+  /* Adjust to fit around the logo */
+  height: 200px;
+  /* Adjust to fit around the logo */
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.scroll {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .default-font {
@@ -53,12 +120,12 @@ body {
   background: #3A3B3E;
 }
 
-/* .header-section{
-  background: url('../images/banner-video.mp4');
-  background-position: center;
-  background-size: cover; 
+.header-section {
   height: 100vh;
-} */
+  overflow-x: hidden;
+  overflow-y: hidden
+}
+
 
 .theme-bg-new {
   background-color: #191919;
@@ -66,23 +133,68 @@ body {
 
 .header {
   background-color: rgba(0, 0, 0, 0.507);
-  height: 99%;
+  height: 100vh;
   position: absolute;
   top: 0;
   width: 100%;
 }
 
-#myVideo {
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.myVideo {
   /* position: fixed; */
   right: 0;
   bottom: 0;
   width: 100%;
-  height: 100%;
 }
 
 .banner-heading h1 {
   font-size: 3rem;
 }
+
+@media only screen and (max-width: 600px) {
+  .banner-heading h1 {
+    font-size: 2rem;
+  }
+
+  .banner-heading {
+    bottom: 30% !important;
+  }
+
+  .header {
+    height: 100% !important;
+  }
+
+  .contact-us-text {
+    left: 0% !important;
+  }
+
+}
+
+.menu i {
+  font-size: 2.5rem;
+  position: absolute;
+  top: 2%;
+  left: 4%;
+}
+
 
 .section-heading h2 {
   width: fit-content;
@@ -92,11 +204,132 @@ body {
   position: relative;
 }
 
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background: #333;
+  padding-top: 60px;
+  transform: translateX(-250px);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.active {
+  transform: translateX(0);
+}
+
+.sidebar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background: #575757;
+}
+
+.close-icon {
+  font-size: 25px;
+  cursor: pointer;
+  color: #fff;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
 
 .banner-heading {
   position: absolute;
   bottom: 40%;
   left: 8%;
+}
+
+.about-section {
+  background: url('../images/about-bg.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.about-section p {
+  font-size: 2rem
+}
+
+.pinal-section {
+  /* background: url('../images/pinal.svg'); */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #191919;
+  overflow: hidden;
+}
+
+.pinal-section p {
+  font-size: 2rem;
+}
+
+.dream-section {
+  background: url('../images/dream-bg.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.dream-section p {
+  font-size: 2rem;
+}
+
+.company-section {
+  background: url('../images/company.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.why-section {
+  background: url('../images/why-bg.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.why-section p {
+  font-size: 2rem;
+}
+
+
+.hr {
+  border: 1.5px solid #E49137;
+}
+
+.step-1 {
+  background: url('../images/step-1.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.step-2 {
+  background: url('../images/step-1.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .contact-us-text {
@@ -177,6 +410,15 @@ body {
   height: 100vh;
 } */
 
+
+
+
+@media only screen and (max-width: 600px) {
+  .navbar-brand img {
+    width: 50% !important;
+  }
+}
+
 .company-section {
   position: relative;
 }
@@ -204,6 +446,12 @@ body {
 .form {
   width: 60%;
   margin: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .form {
+    width: 100%;
+  }
 }
 
 .form .iti {
@@ -234,6 +482,13 @@ body {
   text-decoration: none;
 }
 
+.transform {
+  height: 100vh;
+}
+
+.transform img {
+  width: 100%;
+}
 
 .transform-text {
   background-color: #fff;
@@ -257,25 +512,35 @@ body {
 
 .how-section {
   position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.how-section video {
+  /* position: relative; */
+  /* height: 100vh;    */
+  width: 100%;
 }
 
 .how-its-work {
   position: absolute;
-  bottom: 50%;
-  padding-left: 20px;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.507);
 }
 
-.acheivement-section {
-  position: relative;
+.acheivement {
+  background: url('../images/achivement-bg.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
-.achive-heading {
-  position: absolute;
-  width: 100%;
-  top: 0px;
-  text-align: center;
-}
 
 .achive-bar {
   overflow: hidden;
@@ -326,43 +591,41 @@ body {
 }
 
 
-.about-us-section {
-  font-family: "Inter", sans-serif;
-}
 
-.about-us-section p {
-  color: #505050;
-}
-
-.about-us-section .about-us,
-.about-pinal-section .about-pinal,
 .acheivement-section,
 .what_you_want {
   position: relative;
 }
 
-.about-us-section .about-text {
+/* .about-us-section .about-text {
   position: absolute;
   top: 40%;
-}
+} */
 
 
 
-.about-pinal-section .about-pinal-text {
+/* .about-pinal-section .about-pinal-text {
   position: absolute;
   top: 25%;
   left: 10%;
-}
-
+} */
+/* 
 .about-pinal-section h1 {
   font-size: 4.5rem;
   color: #ffffff;
-}
+} */
 
-.about-pinal-section p {
+/* .about-pinal-section p {
   font-size: 3rem;
   color: #CFCFCF;
 }
+
+.about-pinal {
+  height: 100vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
+} */
+
 
 
 .why-text-heading {
@@ -373,15 +636,15 @@ body {
   color: #CACACA;
 }
 
-.achive-main {
+/* .achive-main {
   position: absolute;
-  top: 25%;
+  top: 10%;
   left: 12%;
   margin-right: auto;
   margin-left: auto;
   height: 100%;
   width: 100%;
-}
+} */
 
 .footer-section ul {
   list-style: none;
